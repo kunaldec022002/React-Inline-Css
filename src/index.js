@@ -1,17 +1,53 @@
-import React from 'react';
+
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import imgwallpaper from './twitter.png';
+
+
+
+
+const fontWhite = {
+  color:'black'
+}
+
+
+function Greeting ({name,city})
+{
+  return(
+
+    <div style={
+      {
+        backgroundColor:'yellow',
+        borderRadius:'5px',
+        boxShadow:'5px 2px 4px 5px black',
+        margin:'20px',
+        padding:'5px',
+        textAlign:'center',
+        width:'300px',
+      }
+    }>
+      <h1 style={fontWhite}>Hello,{name}</h1>
+      <p>How is Whether at {city}</p>
+    </div>
+  )
+}
+
+
+//how to add img in js 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+
+  <img src={imgwallpaper} height="100px"/>
+
+
+  <Greeting name="Kunal" city="Talegaon"/>
+  <Greeting name="Kunal" city="Talegaon"/>
+
+
+
+  </>
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
